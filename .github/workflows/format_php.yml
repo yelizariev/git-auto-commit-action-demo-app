@@ -23,3 +23,5 @@ jobs:
         # branch: master
         repository: .
         branch: ${{ github.head_ref }}
+      env: 
+        GITHUB_TOKEN: dummy_token
