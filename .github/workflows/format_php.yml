@@ -20,8 +20,7 @@ jobs:
       with:
         commit_message: Apply php-cs-fixer changes
         commit_options: '--no-verify'
-        # branch: master
+        branch: master
         repository: .
-        branch: ${{ github.head_ref }}
       env: 
         GITHUB_TOKEN: dummy_token
