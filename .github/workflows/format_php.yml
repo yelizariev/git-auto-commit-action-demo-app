@@ -16,11 +16,12 @@ jobs:
     - name: Run php-cs-fixer
       uses: docker://oskarstark/php-cs-fixer-ga
 
-    - uses: stefanzweifel/git-auto-commit-action@v2.5.0
+    - uses: yelizariev/git-auto-commit-action@custom-author-and-token
       with:
         commit_message: Apply php-cs-fixer changes
+        commit_author_name: Marc Demo (Github Actions)
+        commit_author_email: i18n-bot@it-projects.info
         commit_options: '--no-verify'
         branch: master
         repository: .
-      env: 
-        GITHUB_TOKEN: dummy_token
+        github_token: ${{ secrets.MY_GITHUB_TOKEN }}
